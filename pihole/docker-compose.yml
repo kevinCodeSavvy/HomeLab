@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  pihole:
+   image: pihole/pihole:latest
+   container_name: pihole
+   environment:
+     TZ: 'Europe/London'
+     WEBPASSWORD: ${WEBPASSWORD}
+     VIRTUAL_HOST: pihole.bulatech.co.uk
+     #LETSENCRYPT_HOST: pihole.bulatech.co.uk
+     FTLCONF_LOCAL_IPV4: 192.168.0.47
+     VIRTUALPORT: 80
+   ports:
+     - '53:53/udp'
+     - '53:53/tcp'
+     - '67:67/tcp'
+     - '8085:80'
+   volumes:
+     - './etc-pihole/:/etc/pihole/'
+     - './etc-dnsmasq.d/:/etc/dnsmasq.d/'
+   cap_add:
+     - NET_ADMIN
+   restart: unless-stopped
+
+networks:
+   default:
+     external:
+       name: nginx_proxy
