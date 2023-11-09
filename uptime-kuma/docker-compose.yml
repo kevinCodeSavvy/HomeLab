@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  uptimekuma:
+    image: louislam/uptime-kuma:1
+    container_name: uptimekuma
+    volumes:
+      - uptimekuma-data:/app/data
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+        #- VIRTUAL_HOST=uptimekuma.bulatech.co.uk
+        #- LETSENCRYPT_HOST=uptimekuma.bulatech.co.uk
+
+volumes:
+  uptimekuma-data:
+    driver: local
+
+networks:
+  default:
+    external:
+      name: nginx_proxy
