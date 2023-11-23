@@ -1,0 +1,31 @@
+---
+version: "2.1"
+services:
+  wireguard:
+    image: lscr.io/linuxserver/wireguard
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - SERVERURL=auto
+      - SERVERPORT=51820
+      - PEERS=5 #change to match how many devies you want to use Wireguard on
+      - PEERDNS=192.168.192.6
+      - INTERNAL_SUBNET=10.13.13.0 #optional
+      - ALLOWEDIPS=0.0.0.0/0 #optional
+    volumes:
+      - /path/to/appdata/config:/config
+      - /lib/modules:/lib/modules #do not change
+    ports:
+      - 51820:51820/udp
+    restart: unless-stopped
+    networks:
+      - nginx_proxy
+
+networks:
+  nginx_proxy:
+    external: true

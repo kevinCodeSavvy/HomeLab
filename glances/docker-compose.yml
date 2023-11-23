@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  glances:
+    image: nicolargo/glances:latest  
+    #network_mode: host
+    pid: "host"
+    networks:
+    - nginx_proxy
+    ports:
+      - 61208:61208
+    environment:
+      - "GLANCES_OPT=-w"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    privileged: true
+    restart: always
+    hostname: glances
+
+networks:
+  nginx_proxy:
+    external: true

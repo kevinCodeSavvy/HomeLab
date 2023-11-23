@@ -19,6 +19,9 @@ services:
    volumes:
      - './etc-pihole/:/etc/pihole/'
      - './etc-dnsmasq.d/:/etc/dnsmasq.d/'
+       # the below volumes is to access node exporter for prometheus metrics to grafana
+     - /proc:/host/proc:ro
+     - /sys:/host/sys:ro
    cap_add:
      - NET_ADMIN
    restart: unless-stopped

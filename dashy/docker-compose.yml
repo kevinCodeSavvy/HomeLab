@@ -1,0 +1,22 @@
+---
+version: "2.1"
+services:
+  dashy:
+    image: lissy93/dashy
+    container_name: Dashy
+    volumes:
+      - ./app/public/conf.yml:/app/public/conf.yml
+      - ./local/image/directory:/app/public/item-icons/ 
+    ports:
+      - 4000:80
+    environment:
+      - NODE_ENV=production
+      - UID=1000
+      - GID=1000
+    restart: always
+    networks:
+      - nginx_proxy
+
+networks:
+  nginx_proxy:
+    external: true
