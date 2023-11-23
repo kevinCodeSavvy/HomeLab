@@ -14,7 +14,7 @@ services:
       - SERVERURL=auto
       - SERVERPORT=51820
       - PEERS=5 #change to match how many devies you want to use Wireguard on
-      - PEERDNS=192.168.192.6
+      - PEERDNS={Your pihole container IP address}
       - INTERNAL_SUBNET=10.13.13.0 #optional
       - ALLOWEDIPS=0.0.0.0/0 #optional
     volumes:

@@ -14,7 +14,7 @@ services:
       - DB_MYSQL_HOST=nginxproxymanager-db
       - DB_MYSQL_PORT=3306
       - DB_MYSQL_USER=admin
-      - DB_MYSQL_PASSWORD=Not4You2C!
+      - DB_MYSQL_PASSWORD=${DB_MYSQL_PASSWORD}
       - DB_MYSQL_NAME=npm
     volumes:
       - nginxproxymanager-data:/data
@@ -24,10 +24,10 @@ services:
   nginxproxymanager-db:
     image: jc21/mariadb-aria:10.4.15
     environment:
-      - MYSQL_ROOT_PASSWORD=Not4You2C!
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE=npm
       - MYSQL_USER=admin
-      - MYSQL_PASSWORD=Not4You2C!
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     volumes:
       - nginxproxymanager-db:/var/lib/mysql
     networks:

@@ -12,8 +12,6 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-        #- VIRTUAL_HOST=uptimekuma.bulatech.co.uk
-        #- LETSENCRYPT_HOST=uptimekuma.bulatech.co.uk
 
 volumes:
   uptimekuma-data:

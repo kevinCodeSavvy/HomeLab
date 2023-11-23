@@ -7,9 +7,8 @@ services:
    environment:
      TZ: 'Europe/London'
      WEBPASSWORD: ${WEBPASSWORD}
-     VIRTUAL_HOST: pihole.bulatech.co.uk
-     #LETSENCRYPT_HOST: pihole.bulatech.co.uk
-     FTLCONF_LOCAL_IPV4: 192.168.0.47
+     VIRTUAL_HOST: ${PIHOLE_DNS_NAME}
+     FTLCONF_LOCAL_IPV4: ${PIHOLE_IP}
      VIRTUALPORT: 80
    ports:
      - '53:53/udp'
