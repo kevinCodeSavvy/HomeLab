@@ -1,0 +1,209 @@
+pageInfo:
+  title: Bula Tech
+  description: Bula Tech HomeLab
+  navLinks:
+    - title: GitHub
+      path: https://github.com/Linux-Pingu/HomeLab
+      target: newtab
+    - title: LinkedIn
+      path: >-
+        https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile
+      target: newtab
+appConfig:
+  theme: one-dark
+  layout: vertical
+  iconSize: large
+  language: en
+  startingView: default
+  defaultOpeningMethod: newtab
+  statusCheck: false
+  statusCheckInterval: 0
+  faviconApi: allesedv
+  routingMode: history
+  enableMultiTasking: false
+  widgetsAlwaysUseProxy: false
+  webSearch:
+    disableWebSearch: true
+    searchEngine: duckduckgo
+    openingMethod: newtab
+    searchBangs: {}
+  enableFontAwesome: true
+  enableMaterialDesignIcons: false
+  hideComponents:
+    hideHeading: false
+    hideNav: true
+    hideSearch: true
+    hideSettings: true
+    hideFooter: true
+  showSplashScreen: false
+  preventWriteToDisk: false
+  preventLocalSave: false
+  disableConfiguration: false
+  disableConfigurationForNonAdmin: false
+  allowConfigEdit: true
+  enableServiceWorker: false
+  disableContextMenu: false
+  disableUpdateChecks: false
+  disableSmartSort: false
+  enableErrorReporting: false
+  appConfig: null
+  auth:
+    enableGuestAccess: true
+    users:
+      - user: admin
+        hash: 83ED36572FCF9E4CCBF20BE30619C70ACCE295805EB43F8DC807029152EABC5E
+        type: admin
+    enableKeycloak: false
+sections:
+  - name: Getting Started
+    icon: fas fa-rocket
+    items:
+      - &ref_0
+        title: Dashy Live
+        description: Development a project management links for Dashy
+        icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
+        url: https://live.dashy.to/
+        target: newtab
+        id: 0_1481_dashylive
+      - &ref_1
+        title: GitHub
+        description: Source Code, Issues and Pull Requests
+        url: https://github.com/lissy93/dashy
+        icon: favicon
+        id: 1_1481_github
+      - &ref_2
+        title: Docs
+        description: Configuring & Usage Documentation
+        provider: Dashy.to
+        icon: far fa-book
+        url: https://dashy.to/docs
+        id: 2_1481_docs
+      - &ref_3
+        title: Showcase
+        description: See how others are using Dashy
+        url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
+        icon: far fa-grin-hearts
+        id: 3_1481_showcase
+      - &ref_4
+        title: Config Guide
+        description: See full list of configuration options
+        url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
+        icon: fas fa-wrench
+        id: 4_1481_configguide
+      - &ref_5
+        title: Support
+        description: Get help with Dashy, raise a bug, or get in contact
+        url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
+        icon: far fa-hands-helping
+        id: 5_1481_support
+    filteredItems:
+      - *ref_0
+      - *ref_1
+      - *ref_2
+      - *ref_3
+      - *ref_4
+      - *ref_5
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: true
+  - name: Infrastructure
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_6
+        title: Portainer
+        description: Docker management
+        icon: >-
+          https://4731999.fs1.hubspotusercontent-na1.net/hubfs/4731999/crane-icon.svg
+        url: https://portainer.bulatech.co.uk
+        target: newtab
+        statusCheck: true
+        id: 0_1505_portainer
+      - &ref_7
+        title: Grafana
+        description: Infrastructure monitoring
+        icon: https://grafana.com/favicon.ico
+        url: https://grafana.bulatech.co.uk/?orgId=1&refresh=5s
+        target: newtab
+        statusCheck: true
+        id: 1_1505_grafana
+      - &ref_8
+        title: Pihole
+        description: Blacklisting Domains
+        icon: >-
+          https://pi-hole.net/wp-content/uploads/2016/12/cropped-Vortex-R-32x32.png
+        url: https://pihole.bulatech.co.uk/
+        target: newtab
+        statusCheck: true
+        id: 2_1505_pihole
+      - &ref_9
+        title: Cloudflare
+        description: Domain Management
+        icon: https://www.cloudflare.com/favicon.ico
+        url: https://www.cloudflare.com/en-gb/
+        target: newtab
+        statusCheck: true
+        id: 3_1505_cloudflare
+      - &ref_10
+        title: UptimeKuma
+        description: Web and Certificate Monitoring
+        icon: https://uptime.kuma.pet/favicon.ico
+        url: https://uptimekuma.bulatech.co.uk/
+        target: newtab
+        statusCheck: true
+        id: 4_1505_uptimekuma
+    filteredItems:
+      - *ref_6
+      - *ref_7
+      - *ref_8
+      - *ref_9
+      - *ref_10
+  - name: Media
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_11
+        title: BBC
+        description: BBC channels
+        icon: https://m.media-amazon.com/images/I/41e198uxXxL.png
+        url: https://www.bbc.co.uk/iplayer
+        target: newtab
+        id: 0_480_bbc
+      - &ref_12
+        title: Plex
+        description: Movies and Series
+        icon: https://wiki.mrmc.tv/images/c/cf/Plex_icon.png
+        url: https://app.plex.tv/desktop/#!/
+        target: newtab
+        id: 1_480_plex
+      - &ref_13
+        title: ITV
+        description: ITV channesl
+        icon: >-
+          https://theme.zdassets.com/theme_assets/1953685/d7bf022d20bbc912c534e2088fc78775a9d7cd45.png
+        url: https://www.itv.com
+        target: newtab
+        id: 2_480_itv
+      - &ref_14
+        title: Netflix
+        description: UK Region
+        icon: https://www.netflix.com/favicon.ico
+        url: https://www.netflix.com/gb/
+        target: newtab
+        id: 3_480_netflix
+    filteredItems:
+      - *ref_11
+      - *ref_12
+      - *ref_13
+      - *ref_14
